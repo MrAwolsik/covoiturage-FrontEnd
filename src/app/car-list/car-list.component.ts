@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../model/car';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-car-list',
@@ -8,20 +9,17 @@ import { Car } from '../model/car';
 })
 export class CarListComponent implements OnInit {
 
+  // Constructor
+  constructor(private carService: CarService) { }
+
   //Variables
   nomListe = "BroumBroum (voitures)";
-  cars: Car[] = [
-    { id: 1, model: "207", numberOfPlaces: 5 },
-    { id: 2, model: "Golf", numberOfPlaces: 3 },
-    { id: 3, model: "Megane", numberOfPlaces: 4 }
-  ];
-  selectedCar:Car;
-
-  //
-  constructor() { }
+  cars: Car[];
+  selectedCar: Car;
 
   //
   ngOnInit() {
+    this.cars = this.carService.getCars();
   }
 
   //Save this.car when clicOnIt
