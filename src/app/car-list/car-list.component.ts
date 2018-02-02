@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../model/car';
 import { CarService } from '../car.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-car-list',
@@ -19,12 +20,11 @@ export class CarListComponent implements OnInit {
 
   //
   ngOnInit() {
-    this.cars = this.carService.getCars();
+    this.carService.getCars().subscribe(cars => this.cars = cars);
   }
 
   //Save this.car when clicOnIt
   onSelect(car: Car): void {
-    console.log("selected car: ", car);
     this.selectedCar = car;
   }
 
