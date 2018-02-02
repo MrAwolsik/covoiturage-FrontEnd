@@ -1,7 +1,7 @@
 <h3>
   Liste de {{ nomListe }}
 </h3>
-<div *ngFor="let car of cars">
+<div *ngFor="let car of cars" (click)="onSelect(car)">
   <div>id: {{ car.id }}</div>
   <div>model: {{ car.model | uppercase }}</div>
   <input [(ngModel)]="car.model" />
