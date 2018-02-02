@@ -1,0 +1,24 @@
+<form name="createCar">
+  <label>Marque de la voiture : </label>
+
+  <select name="brand" [(ngModel)]="newCar.brand">
+    <option value="PEUGEOT">Peugeot</option>
+    <option value="CITROEN">Citroen</option>
+    <option value="RENAULT">Renault</option>
+    <option value="VOLKWAGEN">Volkwagen</option>
+    <option value="AUDI">Audi</option>
+    <option value="BMW">BMW</option>
+  </select>
+
+
+  <label>Model de la voiture : </label>
+  <input [(ngModel)]="newCar.model" name="model"/>
+
+  <label>Nombre de places dans la voiture : </label>
+  <input [(ngModel)]="newCar.numberOfPlaces" name="numberOfPlaces"/>
+
+  <!-- <label>Propriétaire de la voiture : </label>
+  <input [(ngModel)]="newCar.owner" name="owner"/> -->
+
+  <input type="submit" (click)="onClic()">
+</form>
