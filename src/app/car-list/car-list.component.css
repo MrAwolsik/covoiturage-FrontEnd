@@ -1,0 +1,9 @@
+.car{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+}

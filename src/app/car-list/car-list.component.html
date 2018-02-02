@@ -1,15 +1,14 @@
 <h3>
   Liste de {{ nomListe }}
 </h3>
-<div *ngFor="let car of cars" (click)="onSelect(car)">
-  <div>id: {{ car.id }}</div>
+<div *ngFor="let car of cars" (click)="onSelect(car)" class="car">
+  <div>Voiture : {{ car.id }}</div>
   <div>model: {{ car.model | uppercase }}</div>
 </div>
 
 <div *ngIf="selectedCar">
   <app-car-detail [car]="selectedCar"></app-car-detail>
 </div>
-
 
 <!-- 2-Ways Data Binding -->
 <!-- <input [(ngModel)]="car.model" /> -->
