@@ -9,7 +9,13 @@ import { CarService } from './car.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CarCreateComponent } from './car-create/car-create.component'
+import { RouterModule, Routes } from '@angular/router';
 
+
+const appRoutes: Routes = [
+  { path: 'car-list', component: CarListComponent },
+  { path: 'car-create', component: CarCreateComponent }
+];
 
 @NgModule({
   declarations: [
@@ -21,7 +27,11 @@ import { CarCreateComponent } from './car-create/car-create.component'
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [CarService],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CarListComponent implements OnInit {
 
-  // Constructor
+  //Constructor
   constructor(private carService: CarService) { }
 
   //Variables
@@ -18,7 +18,7 @@ export class CarListComponent implements OnInit {
   cars: Car[];
   selectedCar: Car;
 
-  //
+  //Do when init
   ngOnInit() {
     this.carService.getCars().subscribe(cars => this.cars = cars);
   }
@@ -26,8 +26,6 @@ export class CarListComponent implements OnInit {
   //Save this.car when clicOnIt
   onSelect(car: Car): void {
     this.selectedCar = car;
-    console.log(car);
-    
   }
 
 }
