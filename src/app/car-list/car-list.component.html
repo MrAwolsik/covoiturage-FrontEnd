@@ -4,13 +4,12 @@
 <div *ngFor="let car of cars" (click)="onSelect(car)">
   <div>id: {{ car.id }}</div>
   <div>model: {{ car.model | uppercase }}</div>
-  <input [(ngModel)]="car.model" />
 </div>
 
 <div *ngIf="selectedCar">
-  The selected car is {{ selectedCar }}
+  <app-car-detail [car]="selectedCar"></app-car-detail>
 </div>
 
-<!-- <div>id: {{ car.id }}</div>
-<div>model: {{ car.model | uppercase }}</div>
-<input [(ngModel)]="car.model" /> -->
+
+<!-- 2-Ways Data Binding -->
+<!-- <input [(ngModel)]="car.model" /> -->
