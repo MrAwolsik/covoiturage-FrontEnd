@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Heebo:500');
+
+body{
+    background-color: #ecf0f1;
+}
+
+.titre{
+    font-family: 'Heebo', sans-serif;
+    color: #2c3e50;
+}
+
+.citation {
+    font-family: 'Cormorant Garamond', serif;
+    color: #2c3e50;
+}
