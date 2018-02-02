@@ -7,6 +7,10 @@
   <input [(ngModel)]="car.model" />
 </div>
 
+<div *ngIf="selectedCar">
+  The selected car is {{ selectedCar }}
+</div>
+
 <!-- <div>id: {{ car.id }}</div>
 <div>model: {{ car.model | uppercase }}</div>
 <input [(ngModel)]="car.model" /> -->
