@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarCreateComponent } from './car-create/car-create.component'
 import { RouterModule, Routes } from '@angular/router';
 import { NavSiteComponent } from './nav-site/nav-site.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
     CarListComponent,
     CarDetailComponent,
     CarCreateComponent,
-    NavSiteComponent
+    NavSiteComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
