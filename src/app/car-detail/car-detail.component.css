@@ -10,4 +10,10 @@
 
 #car_detail {
     font-family: 'Roboto', sans-serif;
+    padding: 10px;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: space-around;
 }

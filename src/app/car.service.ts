@@ -1,3 +1,5 @@
+/* Ensemble de services permettant d'entrer en contact avec le backend */
+
 import { Injectable } from '@angular/core';
 import { Car } from './model/car';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -22,6 +24,10 @@ export class CarService {
   }
   updateCar(car: Car): Observable<Car> {
     return this.http.put<Car>("http://localhost:8080/cars/" + car.id, car, this.httpOptions);
+  }
+
+  deleteCar(car : Car): Observable<Car> {
+    return this.http.delete<Car>("http://localhost:8080/cars/" + car.id, this.httpOptions);
   }
 
 }

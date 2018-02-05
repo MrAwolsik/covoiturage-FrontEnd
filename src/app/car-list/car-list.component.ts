@@ -14,7 +14,7 @@ export class CarListComponent implements OnInit {
   constructor(private carService: CarService) { }
 
   //Variables
-  nomListe = "BroumBroum (voitures)";
+  nomListe = "voitures";
   cars: Car[];
   selectedCar: Car;
 
@@ -27,5 +27,4 @@ export class CarListComponent implements OnInit {
   onSelect(car: Car): void {
     this.selectedCar = car;
   }
-
 }
