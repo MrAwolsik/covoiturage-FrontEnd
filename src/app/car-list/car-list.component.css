@@ -5,5 +5,10 @@
     border-width: 2px;
     border-style: solid;
     padding: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titre {
+    font-family: 'Heebo', sans-serif;
+    color: #2c3e50;
 }

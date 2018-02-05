@@ -10,6 +10,7 @@ import { CarService } from './car.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CarCreateComponent } from './car-create/car-create.component'
 import { RouterModule, Routes } from '@angular/router';
+import { NavSiteComponent } from './nav-site/nav-site.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     CarListComponent,
     CarDetailComponent,
-    CarCreateComponent
+    CarCreateComponent,
+    NavSiteComponent
   ],
   imports: [
     BrowserModule,
