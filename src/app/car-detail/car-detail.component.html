@@ -1,5 +1,28 @@
+<div id="car_detail">
+  <label>Voiture : {{ car.id }}</label>
+</div>
+
 <div class="car_detail">
-  <p>Détails de la voiture : {{ car.id }}</p>
-  <div>model: {{ car.model | uppercase }}</div>
-  <input [(ngModel)]="car.model" />
+
+  <label>Marque de la voiture : </label>
+
+  <select name="brand" [(ngModel)]="car.brand">
+    <option value="PEUGEOT">Peugeot</option>
+    <option value="CITROEN">Citroen</option>
+    <option value="RENAULT">Renault</option>
+    <option value="VOLKWAGEN">Volkwagen</option>
+    <option value="AUDI">Audi</option>
+    <option value="BMW">BMW</option>
+  </select>
+
+  <label>Model de la voiture : </label>
+  <input [(ngModel)]="car.model" name="model"/>
+
+  <label>Nombre de places dans la voiture : </label>
+  <input [(ngModel)]="car.numberOfPlaces" name="numberOfPlaces"/>
+
+  <!-- <label>Propriétaire de la voiture : </label>
+    <input [(ngModel)]="newCar.owner" name="owner"/> -->
+    
+    <input type="submit" (click)="onUpdate()">
 </div>

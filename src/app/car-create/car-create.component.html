@@ -1,4 +1,6 @@
-<form name="createCar">
+<h2 class="titre">Création d'une voiture</h2>
+
+<form name="createCar" class="car_detail">
   <label>Marque de la voiture : </label>
 
   <select name="brand" [(ngModel)]="newCar.brand">
@@ -19,5 +21,6 @@
   <!-- <label>Propriétaire de la voiture : </label>
   <input [(ngModel)]="newCar.owner" name="owner"/> -->
 
-  <input type="submit" (click)="onClic()">
+  <input type="submit" (click)="onCreate()">
+
 </form>

@@ -1,7 +1,13 @@
 .car_detail{
+    display: flex;
+    justify-content: space-around;
     margin: 25px;
     border-style: inset;
     border-color: black;
     padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#car_detail {
     font-family: 'Roboto', sans-serif;
 }

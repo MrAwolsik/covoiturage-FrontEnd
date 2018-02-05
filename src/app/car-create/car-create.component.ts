@@ -7,7 +7,7 @@ import { CarService } from '../car.service';
 @Component({
   selector: 'app-car-create',
   templateUrl: './car-create.component.html',
-  styleUrls: ['./car-create.component.css']
+  styleUrls: ['./car-create.component.css'] 
 })
 export class CarCreateComponent implements OnInit {
 
@@ -19,9 +19,9 @@ export class CarCreateComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClic(): void {
+  onCreate(): void {
     console.log(this.newCar);
     this.carService.postCar(this.newCar).subscribe(car => this.car);
   }
-
+  
 }

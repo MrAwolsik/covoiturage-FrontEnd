@@ -1,0 +1,19 @@
+.car_detail{
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+    border-style: inset;
+    border-color: black;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.car_detail label {
+    padding: 10px;
+}
+
+.titre{
+    font-family: 'Heebo', sans-serif;
+    color: #2c3e50;
+    text-align:center;
+}
