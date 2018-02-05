@@ -17,6 +17,7 @@ export class CarListComponent implements OnInit {
   nomListe = "voitures";
   cars: Car[];
   selectedCar: Car;
+  popup: boolean = false;
 
   //Do when init
   ngOnInit() {
@@ -26,5 +27,11 @@ export class CarListComponent implements OnInit {
   //Save this.car when clicOnIt
   onSelect(car: Car): void {
     this.selectedCar = car;
+    this.popup = true;
+  }
+
+  closePopup($event) {
+    this.popup = false;
+    this.ngOnInit();
   }
 }

@@ -20,8 +20,8 @@ export class CarCreateComponent implements OnInit {
   }
 
   onCreate(): void {
-    console.log(this.newCar);
     this.carService.postCar(this.newCar).subscribe(car => this.car);
+
   }
   
 }

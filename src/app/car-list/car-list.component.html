@@ -7,8 +7,10 @@
   <div>Nombre de places : {{ car.numberOfPlaces }}</div>
 </div>
 
-<div *ngIf="selectedCar">
-  <app-car-detail [car]="selectedCar"></app-car-detail>
+<div *ngIf="popup">
+  <!-- Je passe à car-detail l'objet car contenant la voiture selectionnée 
+    et je dis à car-list d'écouter l'évenement onPopup de l'enfant car-detail -->
+  <app-car-detail [car]="selectedCar" (onPopup)="closePopup($event)"></app-car-detail>
 </div>
 
 <!-- 2-Ways Data Binding -->
